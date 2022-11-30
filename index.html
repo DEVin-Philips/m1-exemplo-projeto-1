@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Lista Exemplo</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+
+  <aside id="colEsquerda">
+    <h1>App Lista</h1>
+
+    <form id="formulario">
+      <label for="campo-titulo">Título</label>
+      <input
+        type="text"
+        id="campo-titulo"
+        name="titulo"
+        placeholder="Exemplo"
+        minlength="4"
+        maxlength="64"
+        required
+      >
+
+      <label for="campo-categoria">Categoria</label>
+      <select name="categoria" id="campo-categoria">
+        <option value="Doce">Doce</option>
+        <option value="Salgado">Salgado</option>
+      </select>
+
+      <label for="campo-descricao">Descrição</label>
+      <textarea
+        id="campo-descricao"
+        name="descricao"
+        placeholder="Detalhes da receita"
+        minlength="8"
+        maxlength="256"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="campo-link">Link</label>
+      <input
+        type="url"
+        id="campo-link"
+        name="link"
+        placeholder="http://www.site.com"
+        maxlength="128"
+      >
+
+      <div id="botoes">
+        <button type="reset" id="limpar-form">🧹</button>
+        <button type="submit">💾</button>
+      </div>
+    </form>
+    <p id="indicador-edicao">*Editando item</p>
+  </aside>
+
+  <main id="colDireita">
+
+    <header>
+      <ul id="categorias">
+        <li>Doce <span id="cat-doce">0</span></li>
+        <li>Salgado <span id="cat-salgado">0</span></li>
+      </ul>
+    
+      <div id="filtro">
+        <input type="text" id="campo-pesquisa" placeholder="Pesquisar...">
+        <button id="executar-pesquisa">🔍</button>
+        <button id="limpar-pesquisa">🧹</button>
+      </div>
+    </header>
+
+    <ul id="lista"></ul>
+  
+  </main>
+
+</body>
+</html>

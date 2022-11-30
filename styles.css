@@ -1,0 +1,130 @@
+html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+#colEsquerda {
+  min-width: 160px;
+  max-width: 33%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #000000;
+  overflow-x: hidden;
+}
+
+#colEsquerda form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#colEsquerda form #botoes {
+  display: flex;
+  gap: 5px;
+}
+
+#colEsquerda form #botoes button {
+  flex-grow: 1;
+}
+
+#campo-descricao {
+  resize: none;
+}
+
+#colDireita {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#colDireita header {
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul#categorias {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+ul#categorias li {
+  border-radius: 5px;
+  padding: 5px;
+  flex-grow: 1;
+  border: 1px solid #000000;
+}
+
+#filtro {
+  display: flex;
+  gap: 5px;
+}
+
+#filtro input {
+  flex-grow: 1;
+}
+
+ul#lista {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+ul#lista li {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+ul#lista li .botoes-item {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+#indicador-edicao {
+  visibility: hidden;
+}
+
+/* #campo-pesquisa {
+  outline-color: red;
+  outline-offset: 10px;
+} */
